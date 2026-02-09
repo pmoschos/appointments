@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".fragments.user.HomeFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_34sdp"
+        android:src="@drawable/demo_image"
+        android:id="@+id/iv_profile"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="@dimen/_34sdp"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="Hi, Alex Carry!"
+         app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+         android:textSize="@dimen/_14sdp"
+         android:layout_marginStart="@dimen/_5sdp"
+         android:id="@+id/tv_name"
+         app:layout_constraintTop_toTopOf="@+id/iv_profile"
+         android:fontFamily="@font/montserrat_bold"
+         android:textColor="@color/primary_black"
+         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Good Morning"
+        android:id="@+id/tvGreeting"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+        app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="@dimen/_8sdp"
+        android:layout_height="wrap_content"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_28sdp"
+        android:src="@drawable/ic_bell"
+        app:layout_constraintTop_toTopOf="@+id/iv_profile"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="@dimen/_28sdp"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:hint="@string/search"
+        android:background="@drawable/bg_search_bar"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableTint="#999"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_services"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_service"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

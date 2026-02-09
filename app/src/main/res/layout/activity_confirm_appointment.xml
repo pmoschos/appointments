@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ConfirmAppointmentActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gray_rounded"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/_7sdp"
+            />
+
+        <!-- Search Result Title -->
+        <TextView
+            android:id="@+id/service_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="welness"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"
+
+            />
+    </RelativeLayout>
+    <!-- Summary Card -->
+
+    <!-- Add ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_16sdp">
+
+            <!-- Service Image & Title -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivService"
+                android:layout_width="@dimen/_39sdp"
+                android:layout_height="@dimen/_39sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/demo_image2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundImageShape10Sdp" />
+
+            <TextView
+                android:id="@+id/tvServiceName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="Wellcare Physiotherapy"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_bold"
+                app:layout_constraintStart_toEndOf="@id/ivService"
+                app:layout_constraintTop_toTopOf="@id/ivService"
+                app:layout_constraintBottom_toTopOf="@+id/tvClinicName"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvClinicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="Wellcare Clinic"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toEndOf="@id/ivService"
+                app:layout_constraintTop_toBottomOf="@+id/tvServiceName"
+                app:layout_constraintBottom_toBottomOf="@id/ivService" />
+
+            <!-- Divider -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+
+                app:layout_constraintTop_toBottomOf="@id/ivService"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <!-- ROW 1: Duration & Category -->
+            <TextView
+                android:id="@+id/tvDurationLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+                app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+            <TextView
+                android:id="@+id/tvCategoryLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDurationLabel" />
+
+            <TextView
+                android:id="@+id/tvDurationValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="10-15 minutes"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDurationLabel"
+                app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+            <TextView
+                android:id="@+id/tvCategoryValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Health"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCategoryLabel" />
+
+            <!-- ROW 2: Date & Time -->
+            <TextView
+                android:id="@+id/tvDateLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDurationValue"
+                app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+            <TextView
+                android:id="@+id/tvTimeLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDateLabel" />
+
+            <TextView
+                android:id="@+id/tvDateValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="20 Jan, 2026"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDateLabel"
+                app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+            <TextView
+                android:id="@+id/tvTimeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="12:00 AM"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeLabel" />
+
+            <!-- Divider -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp" />
+            <!-- ROW 3: Amount (full width) -->
+            <TextView
+                android:id="@+id/tvAmountLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2"
+                app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+            <TextView
+                android:id="@+id/tvAmountValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$40.00"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/montserrat_bold"
+                app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAmountLabel"
+                app:layout_constraintBottom_toBottomOf="@id/tvAmountLabel" />
+
+            <!-- Vertical Guideline at 50% -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Add Note Section -->
+    <TextView
+        android:id="@+id/tvAddNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/add_note"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSummary" />
+
+
+
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/bg_note_input"
+        android:gravity="top|start"
+        android:hint="@string/enter_your_note_here"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/_12sdp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddNoteLabel" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:text="@string/confirm_appointment"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12sdp"
+        android:background="@drawable/bg_button_primary"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etNote"
+        app:layout_constraintEnd_toEndOf="@id/etNote"
+        android:layout_marginBottom="@dimen/_24sdp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ServiceDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Empty State Message -->
+        <TextView
+            android:id="@+id/tvEmptySlots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="No available slots for this date"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/gray"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintTop_toBottomOf="@id/tvAvailableTimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/header"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_31sdp"
+                android:layout_height="@dimen/_31sdp"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gray_rounded"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/_7sdp"
+                />
+
+            <!-- Search Result Title -->
+            <TextView
+                android:id="@+id/service_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="welness"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_semibold"
+
+                />
+        </RelativeLayout>
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/ivClinic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            android:src="@drawable/demo_image2"
+         />
+
+        <!-- OVERLAY Clinic Card (floating on image) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardClinicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_185sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+
+        app:cardElevation="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/tvClinicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Alex Clinic"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/primary_black"
+                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvDurationCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="5-10 min • Health"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClinicName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Appointment Section -->
+    <TextView
+        android:id="@+id/tvAppointmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/appointments"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardClinicOverlay" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/_4sdp"
+        android:text="March 25, 2025"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/primary_text_heading"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAppointmentLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tvAppointmentLabel" />
+
+    <!-- Calendar Row (M T W T F S S) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="7"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvAppointmentLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_calendar" />
+
+    <!-- Available Time Label -->
+    <TextView
+        android:id="@+id/tvAvailableTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/available_time"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvCalendar" />
+
+    <!-- Time Slots RecyclerView (3 cols, horizontal scrollable if needed) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTimeSlots"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        app:layout_constraintTop_toBottomOf="@id/tvAvailableTimeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="9"
+        tools:listitem="@layout/item_time_slot" />
+
+    <!-- Continue Button (plain TextView with bg) -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvContinue"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/continues"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_button_primary"
+            app:layout_constraintTop_toBottomOf="@+id/rvTimeSlots"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>

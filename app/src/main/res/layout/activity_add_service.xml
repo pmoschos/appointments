@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/main"
+    tools:context=".activities.AddServiceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gray_rounded"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/_7sdp"
+            />
+
+        <!-- Search Result Title -->
+        <TextView
+            android:id="@+id/service_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_service"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"
+
+            />
+    </RelativeLayout>
+
+    <!-- Content Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp">
+
+            <!-- First Name -->
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service_name"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/et_service_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:hint="Alex Carry"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:background="@drawable/bg_edt"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp" />
+            <!-- Last Name -->
+            <TextView
+                android:id="@+id/tv_service_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toBottomOf="@+id/et_service_name"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/spinner_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_edt"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <Spinner
+                    android:id="@+id/spinner_rotation"
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@drawable/spinner_dropdown_background"
+                    style="@style/Widget.AppCompat.Spinner.Underlined" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    android:contentDescription="Dropdown arrow"
+                    android:layout_marginEnd="@dimen/_5sdp" />
+            </RelativeLayout>
+
+            <!-- Date of Birth -->
+            <TextView
+                android:id="@+id/tv_service_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toBottomOf="@id/spinner_container"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_service_duration"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:hint="10 minutes"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:background="@drawable/bg_edt"
+                android:inputType="number"
+                android:textSize="@dimen/_10sdp"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_duration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="TextFields" />
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/tv_service_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toBottomOf="@id/et_service_duration"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_service_price"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:hint="$40"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:background="@drawable/bg_edt"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tv_service_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toBottomOf="@id/et_service_price"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_120sdp"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_note_input"
+                android:gravity="top|start"
+                android:hint="@string/enter_your_note_here"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_description" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_34sdp"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_16sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Save Button -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

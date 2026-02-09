@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/main"
+ >
+    <!-- Back Button -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_centerVertical="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/gray_rounded"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/_7sdp"
+            />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_amp_conditions"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <!-- Last Update Date -->
+
+
+        <!-- Scrollable Content Area -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/checkboxContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Terms Content -->
+                <TextView
+                    android:id="@+id/tvTermsContent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use_privacy_cookies_registration_and_passwords_intellectual_property_links_to_other_sites_termination_and_disclaimers_of_responsibility_terms_and_conditions_are_used_and_necessary_to_protect_a_website_owner_from_liability_of_a_user_relying_on_the_information_or_the_goods_provided_from_the_site_then_suffering_a_loss"
+                    android:textColor="@color/primary_text_heading"
+                    android:lineHeight="@dimen/_17sdp"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:fontFamily="@font/montserrat_regular" />
+
+                <TextView
+                    android:id="@+id/tvLastUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_update_on_6_feb_2026"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_back"
+                    android:layout_marginTop="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvTermsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use_privacy_cookies_registration_and_passwords_intellectual_property_links_to_other_sites_termination_and_disclaimers_of_responsibility_terms_and_conditions_are_used_and_necessary_to_protect_a_website_owner_from_liability_of_a_user_relying_on_the_information_or_the_goods_provided_from_the_site_then_suffering_a_loss_help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use"
+                    android:textColor="@color/primary_text_heading"
+                    android:lineHeight="@dimen/_17sdp"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:fontFamily="@font/montserrat_regular" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Checkbox Container -->
+        <LinearLayout
+            android:id="@+id/checkboxContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <CheckBox
+                android:id="@+id/cbAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvAgreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/i_agree_to_privacy_policy"
+                android:textColor="@color/primary_text_heading"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+        </LinearLayout>
+
+        <!-- Button Container -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Decline Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDecline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="@color/color_primary"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sdp"
+                android:background="@drawable/bg_button_stroke_primary"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginEnd="@dimen/_5sdp" />
+
+            <!-- Agree Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAgree"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_weight="1"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp"
+                android:background="@drawable/bg_button_primary"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="@dimen/_5sdp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

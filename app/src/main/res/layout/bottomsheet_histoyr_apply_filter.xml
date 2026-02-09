@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+
+    <!-- Appointment Section -->
+
+        <TextView
+            android:id="@+id/tvEditAppointmentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/apply_filters"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:src="@drawable/ic_cancel"
+               android:id="@+id/icCancel"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginEnd="@dimen/_10sdp"
+               app:layout_constraintTop_toTopOf="@+id/tvEditAppointmentLabel"
+               app:layout_constraintBottom_toBottomOf="@+id/tvEditAppointmentLabel"
+               android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tvAppointmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/date"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditAppointmentLabel"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/_4sdp"
+        android:text="March 25, 2025"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/primary_text_heading"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAppointmentLabel"
+        app:layout_constraintBottom_toBottomOf="@id/tvAppointmentLabel" />
+
+    <!-- Calendar Row (M T W T F S S) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="7"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvAppointmentLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_calendar" />
+
+        <!-- Service Category Label -->
+        <TextView
+            android:id="@+id/tvServiceCategoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/service_category"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvCalendar" />
+
+        <!-- Service CategoryRecyclerView (3 cols, horizontal scrollable if needed) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategorySlots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceCategoryLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:itemCount="9"
+            tools:listitem="@layout/item_time_slot" />
+
+
+
+    <!-- Available Time Label -->
+    <TextView
+        android:id="@+id/tvAvailableTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/time_duration"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvCategorySlots" />
+
+    <!-- Time Slots RecyclerView (3 cols, horizontal scrollable if needed) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTimeSlots"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        app:layout_constraintTop_toBottomOf="@id/tvAvailableTimeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="9"
+        tools:listitem="@layout/item_time_slot" />
+
+        <TextView
+            android:id="@+id/tvStatusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/status"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvTimeSlots" />
+
+        <!-- Time Slots RecyclerView (3 cols, horizontal scrollable if needed) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStatusSlots"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            app:layout_constraintTop_toBottomOf="@id/tvStatusLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:itemCount="9"
+            tools:listitem="@layout/item_time_slot" />
+
+    <!-- Continue Button (plain TextView with bg) -->
+
+        <!-- Clear Filters Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/clear_filters"
+            android:textColor="@color/color_primary"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_button_stroke_primary"
+            app:layout_constraintTop_toBottomOf="@+id/rvStatusSlots"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp" />
+
+        <!-- Apply Filters Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_aply"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/apply_filters"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/bg_button_primary"
+            app:layout_constraintTop_toBottomOf="@+id/btn_clear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

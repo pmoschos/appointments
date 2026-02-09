@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginEnd="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_1sdp"
+
+    app:cardBackgroundColor="@color/white">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp">
+
+        <!-- Service Image & Title -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivService"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/demo_image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundImageShape10Sdp" />
+
+        <TextView
+            android:id="@+id/tvServiceName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="Wellcare Physiotherapy"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toEndOf="@id/ivService"
+            app:layout_constraintTop_toTopOf="@id/ivService"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more"
+            app:layout_constraintBottom_toTopOf="@+id/tvClinicName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvClinicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="Wellcare Clinic"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@id/ivService"
+            app:layout_constraintTop_toBottomOf="@+id/tvServiceName"
+            app:layout_constraintBottom_toBottomOf="@id/ivService" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_more"
+            android:id="@+id/iv_more"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+
+            app:layout_constraintTop_toBottomOf="@id/ivService"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+
+
+        <!-- ROW 1: Date & Time -->
+        <TextView
+            android:id="@+id/tvDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_medium"
+            app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDateLabel" />
+
+        <TextView
+            android:id="@+id/tvDateValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20 Jan, 2026"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateLabel"
+            app:layout_constraintEnd_toStartOf="@id/guidelineCenter" />
+
+        <TextView
+            android:id="@+id/tvTimeValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12:00 AM"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeLabel" />
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+
+        <!-- ROW 1: Duration & Category -->
+        <TextView
+            android:id="@+id/tvNotesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+
+
+        <TextView
+            android:id="@+id/tvNotesValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Feeling Tooth Pain on Right Side."
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotesLabel"
+            />
+
+
+
+        <!-- Vertical Guideline at 50% -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

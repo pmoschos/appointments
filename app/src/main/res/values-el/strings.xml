@@ -1,0 +1,229 @@
+<resources>
+
+    <string name="app_name">Ραντεβού</string>
+    <string name="hello_blank_fragment">Γεια σου κενό τμήμα</string>
+
+    <string name="all_your_appointments_one_app">Όλα τα ραντεβού σου, σε μία εφαρμογή</string>
+    <string name="book_services_track_your_schedule_and_manage_your_time_and_expenses_all_from_one_simple_place">
+        Κλείσε υπηρεσίες, παρακολούθησε το πρόγραμμά σου και διαχειρίσου τον χρόνο και τα έξοδά σου — όλα από ένα απλό μέρος.
+    </string>
+    <string name="find_trusted_service_providers_book_appointments_instantly_and_stay_organized_without_the_stress">
+        Βρες αξιόπιστους παρόχους υπηρεσιών, κλείσε ραντεβού άμεσα και μείνε οργανωμένος χωρίς άγχος.
+    </string>
+
+    <string name="book_track_relax">Κλείσε. Παρακολούθησε. Χαλάρωσε.</string>
+
+    <string name="continues">Συνέχεια</string>
+    <string name="getstarted">Ξεκίνα</string>
+    <string name="book_appointment">Κλείσε Ραντεβού</string>
+    <string name="search">Αναζήτηση</string>
+
+    <string name="english">Αγγλικά</string>
+    <string name="greek">Ελληνικά</string>
+
+    <string name="terms_amp_conditions"><![CDATA[Όροι & Προϋποθέσεις]]></string>
+    <string name="default_web_client_id">6580893174-25a9bd7k6nembvbm8um8gaobc75jrhs9.apps.googleusercontent.com</string>
+
+    <string name="user">Χρήστης</string>
+    <string name="service_provider">Πάροχος Υπηρεσιών</string>
+
+    <string name="notifications_settings">Ρυθμίσεις Ειδοποιήσεων</string>
+
+    <string name="terms_and_conditions"><![CDATA[Όροι &amp; Προϋποθέσεις]]></string>
+    <string name="privacy_policy">Πολιτική Απορρήτου</string>
+
+    <string name="no_appointments">Κανένα Ραντεβού</string>
+    <string name="book_your_first_appointment">Κλείσε το πρώτο σου ραντεβού</string>
+
+    <string name="all_dates">Όλες οι Ημερομηνίες</string>
+    <string name="all_categories">Όλες οι Κατηγορίες</string>
+    <string name="all_statuses">Όλες οι Καταστάσεις</string>
+
+    <string name="any_time">Οποιαδήποτε Ώρα</string>
+    <string name="morning">Πρωί</string>
+    <string name="afternoon">Μεσημέρι</string>
+    <string name="evening">Βράδυ</string>
+
+    <string name="custom_range">Προσαρμοσμένο Εύρος</string>
+
+    <string name="upcoming">Επερχόμενα</string>
+    <string name="completed">Ολοκληρωμένα</string>
+    <string name="cancelled">Ακυρωμένα</string>
+    <string name="no_show">Δεν Εμφανίστηκε</string>
+    <string name="past">Παρελθόν</string>
+
+    <string name="custom_time_range_placeholder">Η επιλογή προσαρμοσμένου χρονικού εύρους θα εμφανιστεί εδώ</string>
+    <string name="custom_date_range_placeholder">Η επιλογή προσαρμοσμένου εύρους ημερομηνιών θα εμφανιστεί εδώ</string>
+
+    <string name="no_upcoming_appointments">Δεν υπάρχουν επερχόμενα ραντεβού</string>
+    <string name="no_past_appointments">Δεν υπάρχουν παλαιότερα ραντεβού</string>
+    <string name="no_cancelled_appointments">Δεν υπάρχουν ακυρωμένα ραντεβού</string>
+
+    <string name="manage_your_appointments_with_us">Διαχειρίσου τα ραντεβού σου μαζί μας</string>
+
+    <string name="sign_in_to_your_account">Συνδέσου στον λογαριασμό σου</string>
+    <string name="continue_with_google">Συνέχεια με Google</string>
+    <string name="privacy_policy_terms_of_service">Πολιτική Απορρήτου - Όροι Χρήσης</string>
+
+    <string name="google_login_successful_for_user">Η σύνδεση με Google ήταν επιτυχής για τον χρήστη: %1$s</string>
+    <string name="welcome_back">Καλώς ήρθες ξανά, %1$s</string>
+    <string name="authentication_failed">Η ταυτοποίηση απέτυχε: %1$s</string>
+
+    <string name="home">Αρχική</string>
+    <string name="appointments">Ραντεβού</string>
+    <string name="history">Ιστορικό</string>
+    <string name="profile">Προφίλ</string>
+
+    <string name="hi">Γεια σου, %1$s!</string>
+    <string name="hi_there">Γεια σου!</string>
+
+    <string name="good_morning">Καλημέρα</string>
+    <string name="good_afternoon">Καλό μεσημέρι</string>
+    <string name="good_evening">Καλό απόγευμα</string>
+    <string name="good_night">Καληνύχτα</string>
+
+    <string name="total_appointments">Σύνολο Ραντεβού</string>
+    <string name="total_time">Συνολικός Χρόνος</string>
+    <string name="total_cost">Συνολικό Κόστος</string>
+
+    <string name="history_list">Λίστα Ιστορικού</string>
+    <string name="filters">Φίλτρα</string>
+
+    <string name="day">Ημέρα</string>
+    <string name="week">Εβδομάδα</string>
+    <string name="month">Μήνας</string>
+
+    <string name="today">Σήμερα</string>
+    <string name="date">Ημερομηνία</string>
+    <string name="time">Ώρα</string>
+
+    <string name="notes">Σημειώσεις:</string>
+
+    <string name="general_settings">Γενικές Ρυθμίσεις</string>
+    <string name="notifications">Ειδοποιήσεις</string>
+    <string name="languages">Γλώσσες</string>
+    <string name="logout">Αποσύνδεση</string>
+
+    <string name="my_services">Οι Υπηρεσίες μου</string>
+    <string name="add_service">+ Προσθήκη Υπηρεσίας</string>
+
+    <string name="duration">Διάρκεια</string>
+    <string name="price">Τιμή</string>
+
+    <string name="today_s">Σήμερα</string>
+    <string name="my_appointments">Τα Ραντεβού μου</string>
+    <string name="status">Κατάσταση</string>
+
+    <string name="service_name_is_required">Απαιτείται όνομα υπηρεσίας</string>
+    <string name="valid_duration_required">Απαιτείται έγκυρη διάρκεια</string>
+    <string name="valid_price_required">Απαιτείται έγκυρη τιμή</string>
+    <string name="description_is_required">Απαιτείται περιγραφή</string>
+
+    <string name="service_created_successfully">Η υπηρεσία δημιουργήθηκε με επιτυχία!</string>
+
+    <string name="service_name">Όνομα Υπηρεσίας</string>
+    <string name="category">Κατηγορία</string>
+    <string name="description">Περιγραφή</string>
+
+    <string name="enter_your_note_here">Γράψε τη σημείωσή σου εδώ...</string>
+    <string name="done">Ολοκλήρωση</string>
+
+    <string name="minutes">%1$d λεπτά</string>
+
+    <string name="amount">Ποσό</string>
+    <string name="add_note">Προσθήκη Σημείωσης</string>
+
+    <string name="confirm_appointment">Επιβεβαίωση Ραντεβού</string>
+
+    <string name="edit_profile">Επεξεργασία Προφίλ</string>
+    <string name="first_name">Όνομα</string>
+    <string name="last_name">Επώνυμο</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Ημερομηνία Γέννησης</string>
+
+    <string name="first_name_is_required">Απαιτείται όνομα</string>
+    <string name="last_name_is_required">Απαιτείται επώνυμο</string>
+    <string name="valid_email_is_required">Απαιτείται έγκυρο email</string>
+
+    <string name="profile_updated_successfully">Το προφίλ ενημερώθηκε με επιτυχία!</string>
+
+    <string name="edit_service">Επεξεργασία Υπηρεσίας</string>
+    <string name="duration_minutes">Διάρκεια (λεπτά)</string>
+    <string name="update_service">Ενημέρωση Υπηρεσίας</string>
+    <string name="delete_service">Διαγραφή Υπηρεσίας</string>
+
+    <string name="no_services_available">Δεν υπάρχουν διαθέσιμες υπηρεσίες</string>
+
+    <string name="book">Κράτηση</string>
+
+    <string name="about_info">Πληροφορίες</string>
+    <string name="providers">Πάροχοι</string>
+    <string name="available_time">Διαθέσιμη Ώρα</string>
+
+    <string name="help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use_privacy_cookies_registration_and_passwords_intellectual_property_links_to_other_sites_termination_and_disclaimers_of_responsibility_terms_and_conditions_are_used_and_necessary_to_protect_a_website_owner_from_liability_of_a_user_relying_on_the_information_or_the_goods_provided_from_the_site_then_suffering_a_loss">
+        Βοηθήστε να προστατεύσετε τον ιστότοπό σας και τους χρήστες του με σαφείς και δίκαιους όρους χρήσης. Αυτοί οι όροι και προϋποθέσεις για έναν ιστότοπο καθορίζουν βασικά θέματα όπως αποδεκτή χρήση, απόρρητο, cookies, εγγραφή και κωδικοί πρόσβασης, πνευματική ιδιοκτησία, σύνδεσμοι προς άλλους ιστότοπους, τερματισμός και αποποιήσεις ευθύνης. Οι όροι και προϋποθέσεις χρησιμοποιούνται και είναι απαραίτητοι για την προστασία του ιδιοκτήτη ενός ιστότοπου από ευθύνη σε περίπτωση που ένας χρήστης βασιστεί στις πληροφορίες ή στα αγαθά που παρέχονται από τον ιστότοπο και υποστεί ζημία.
+    </string>
+
+    <string name="last_update_on_6_feb_2026">Τελευταία ενημέρωση στις 6 Φεβ, 2026</string>
+
+    <string name="help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use_privacy_cookies_registration_and_passwords_intellectual_property_links_to_other_sites_termination_and_disclaimers_of_responsibility_terms_and_conditions_are_used_and_necessary_to_protect_a_website_owner_from_liability_of_a_user_relying_on_the_information_or_the_goods_provided_from_the_site_then_suffering_a_loss_help_protect_your_website_and_its_users_with_clear_and_fair_website_terms_and_conditions_these_terms_and_conditions_for_a_website_set_out_key_issues_such_as_acceptable_use">
+        Βοηθήστε να προστατεύσετε τον ιστότοπό σας και τους χρήστες του με σαφείς και δίκαιους όρους χρήσης. Αυτοί οι όροι και προϋποθέσεις για έναν ιστότοπο καθορίζουν βασικά θέματα όπως αποδεκτή χρήση, απόρρητο, cookies, εγγραφή και κωδικοί πρόσβασης, πνευματική ιδιοκτησία, σύνδεσμοι προς άλλους ιστότοπους, τερματισμός και αποποιήσεις ευθύνης. Οι όροι και προϋποθέσεις χρησιμοποιούνται και είναι απαραίτητοι για την προστασία του ιδιοκτήτη ενός ιστότοπου από ευθύνη σε περίπτωση που ένας χρήστης βασιστεί στις πληροφορίες ή στα αγαθά που παρέχονται από τον ιστότοπο και υποστεί ζημία. Βοηθήστε να προστατεύσετε τον ιστότοπό σας και τους χρήστες του με σαφείς και δίκαιους όρους χρήσης. Αυτοί οι όροι και προϋποθέσεις για έναν ιστότοπο καθορίζουν βασικά θέματα όπως αποδεκτή χρήση,
+    </string>
+
+    <string name="i_agree_to_privacy_policy">Συμφωνώ με την πολιτική απορρήτου</string>
+
+    <string name="cancel">Ακύρωση</string>
+    <string name="confirm">Επιβεβαίωση</string>
+
+    <string name="delete_appointment">Διαγραφή Ραντεβού</string>
+    <string name="are_you_sure_you_want_to_delete_this_appointment_this_action_cannot_be_undone">
+        Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το ραντεβού; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.
+    </string>
+
+    <string name="delete">Διαγραφή</string>
+    <string name="appointment_deleted_successfully">Το ραντεβού διαγράφηκε με επιτυχία</string>
+
+    <!-- NOTE: Your English string has extra quotes. This is correct format -->
+    <string name="delete_service_message">Είστε σίγουροι ότι θέλετε να διαγράψετε το «%1$s»;</string>
+
+    <string name="apply_filters">Εφαρμογή Φίλτρων</string>
+    <string name="service_category">Κατηγορία Υπηρεσίας</string>
+    <string name="time_duration">Διάρκεια Χρόνου</string>
+    <string name="clear_filters">Καθαρισμός Φίλτρων</string>
+
+    <string name="appointment_booked_successfully">Το ραντεβού κλείστηκε με επιτυχία!</string>
+    <string name="your_appointment_has_been_scheduled_you_will_receive_a_confirmation_email_shortly">
+        Το ραντεβού σας προγραμματίστηκε. Θα λάβετε σύντομα email επιβεβαίωσης.
+    </string>
+
+    <string name="edit_appointment">Επεξεργασία Ραντεβού</string>
+
+    <string name="appointment1">Ραντεβού</string>
+    <string name="updated">Ενημερώθηκε</string>
+    <string name="updating">Ενημέρωση...</string>
+    <string name="update">Ενημέρωση</string>
+
+    <string name="log_out_successfully">Αποσυνδεθήκατε με επιτυχία!</string>
+    <string name="you_have_logged_out_from_app_successfully">Αποσυνδεθήκατε από την εφαρμογή με επιτυχία.</string>
+    <string name="logging_out">Αποσύνδεση!</string>
+    <string name="you_are_logging_out_of_app_next_time_you_have_to_login_again">
+        Αποσυνδέεστε από την εφαρμογή. Την επόμενη φορά θα χρειαστεί να συνδεθείτε ξανά.
+    </string>
+
+    <string name="welcome_alex_carry">Καλώς ήρθες Alex Carry!</string>
+
+    <string name="start_your_vehicle_car_amp_moto_inspection_journey_today_by_providing_vehicle_data_to_workshop">
+        <![CDATA[Ξεκινήστε το ταξίδι επιθεώρησης οχήματος (αυτοκίνητο & μηχανή) σήμερα, παρέχοντας δεδομένα οχήματος στο συνεργείο.]]>
+    </string>
+
+    <string name="start_now">Ξεκίνα Τώρα</string>
+    <string name="welcome">Καλώς ήρθες!</string>
+
+    <string name="please_select_your_role_to_continue_with_app">
+        Παρακαλώ επιλέξτε τον ρόλο σας για να συνεχίσετε στην εφαρμογή
+    </string>
+
+    <string name="continue_as_normal_user">Συνέχεια ως Χρήστης</string>
+    <string name="continue_service_provider">Συνέχεια ως Πάροχος Υπηρεσιών</string>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_bg"
+    android:padding="@dimen/_20sdp">
+
+    <!-- Success Icon -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivSuccess"
+        android:layout_width="@dimen/_56sdp"
+        android:layout_height="@dimen/_56sdp"
+        android:src="@drawable/ic_success"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out Successfully!"
+        android:textColor="@color/primary_black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/ivSuccess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_16sdp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You Have Logged Out From App Successfully."
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textAlignment="center"
+        android:lineSpacingExtra="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_44sdp"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button_primary"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

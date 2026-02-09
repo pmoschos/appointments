@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CellImageView">
+        <attr name="meow_imageview_useColor" format="boolean" />
+        <attr name="meow_imageview_isBitmap" format="boolean" />
+        <attr name="meow_imageview_resource" format="reference" />
+        <attr name="meow_imageview_color" format="color" />
+        <attr name="meow_imageview_size" format="dimension" />
+        <attr name="meow_imageview_isAction" format="boolean" />
+        <attr name="meow_imageview_actionBackgroundAlpha" format="boolean" />
+        <attr name="meow_imageview_changeSize" format="boolean" />
+        <attr name="meow_imageview_fitImage" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MeowBottomNavigation">
+        <attr name="mbn_defaultIconColor" format="color" />
+        <attr name="mbn_selectedIconColor" format="color" />
+        <attr name="mbn_backgroundBottomColor" format="color" />
+        <attr name="mbn_circleColor" format="color" />
+        <attr name="mbn_countTextColor" format="color" />
+        <attr name="mbn_countBackgroundColor" format="color" />
+        <attr name="mbn_countTypeface" format="string" />
+        <attr name="mbn_rippleColor" format="color" />
+        <attr name="mbn_shadowColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CurvedBottomNavigationView">
+        <attr name="cbn_selectedColor" format="color" />
+        <attr name="cbn_unSelectedColor" format="color" />
+        <attr name="cbn_animDuration" format="integer" />
+        <attr name="cbn_fabElevation" format="dimension" />
+        <attr name="cbn_elevation" format="dimension"/>
+        <attr name="cbn_fabBg" format="color" />
+        <attr name="cbn_bg" format="color" />
+        <attr name="cbn_textSize" format="dimension" />
+        <attr name="cbn_textColor" format="color" />
+        <attr name="cbn_dotColor" format="color" />
+        <attr name="cbn_dotSize" format="dimension"/>
+        <attr name="fontFamily" format="reference|string"/>
+    </declare-styleable>
+
+    <attr name="iconColor" format="reference|color" />
+    <attr name="humIconColor" format="reference|color" />
+    <attr name="titleColor" format="reference|color" />
+    <attr name="weatherItemColor" format="reference|color" />
+    <attr name="smallTitleColor" format="reference|color" />
+    <attr name="weatherItemTitleColor" format="reference|color" />
+    <attr name="colorPrimary" format="reference|color" />
+    <attr name="colorPrimaryDark" format="reference|color" />
+    <attr name="colorAccent" format="reference|color" />
+    <attr name="switchDarkColor" format="reference|color" />
+    <attr name="switchLightColor" format="reference|color" />
+
+    <declare-styleable name="KalendarView">
+        <!--        Indicator to show the today's date. accepts drawables only-->
+        <attr name="todayIndicator" format="reference"/>
+        <!--        Indicator to show the selected date. accepts drawables only-->
+        <attr name="selectedIndicator" format="reference"/>
+        <!--        To indicate the events in the date cell. accepts drawables only-->
+        <attr name="eventIndicator" format="reference"/>
+        <!--        Color to change the date text color of showing month-->
+        <attr name="dateColor" format="color"/>
+        <!--        Color to change the date text color of non-showing month(previous and next month's)-->
+        <attr name="nonMonthDateColor" format="color"/>
+        <!--        Color to change the date text color of today's date-->
+        <attr name="todayDateColor" format="color"/>
+        <!--        Color to change the date text color of selected date-->
+        <attr name="selectedDateColor" format="color"/>
+        <!--        Font Family of month, year head in the top-->
+        <attr name="monthFontFamily" format="reference"/>
+        <!--        Font Family of week days head-->
+        <attr name="weekFontFamily" format="reference"/>
+        <!--        Font Family of date text-->
+        <attr name="dateFontFamily" format="reference"/>
+        <!--        TextAppearance of month,year head-->
+        <attr name="monthTextStyle" format="reference"/>
+        <!--        TextAppearance of weekdays head-->
+        <attr name="weekTextStyle" format="reference"/>
+        <!--        TextAppearance of date text-->
+        <attr name="dateTextStyle" format="reference"/>
+        <!--        Drawable for next icon-->
+        <attr name="nextIcon" format="reference"/>
+        <!--        Drawable for prev icon-->
+        <attr name="prevIcon" format="reference"/>
+        <!--        color for calendar background-->
+        <attr name="calendarBackground" format="color"/>
+        <!--        enable animation for month changes. Default value is true-->
+        <attr name="animatingMonths" format="boolean"/>
+    </declare-styleable>
+
+
+
+
+
+
+</resources>

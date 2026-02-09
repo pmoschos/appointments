@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <!-- Image -->
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_service_image"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_81sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/demo_image2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundImageShape10Sdp"
+            />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Wellness Care"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/primary_black"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toEndOf="@id/iv_service_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_book" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="A complete basic health examination for your body"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@id/iv_service_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toStartOf="@id/btn_book" />
+
+        <!-- Duration & Category -->
+        <LinearLayout
+            android:id="@+id/ll_meta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/iv_service_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"
+            app:layout_constraintEnd_toStartOf="@id/btn_book">
+
+            <ImageView
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:src="@drawable/ic_clock"
+                android:layout_gravity="center"
+                app:tint="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="5-10 min"
+                android:id="@+id/tvDuration"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="•"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="Wellness"
+                android:id="@+id/tvCategory"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/gray"
+                android:fontFamily="@font/montserrat_regular" />
+        </LinearLayout>
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$309.00"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/blue"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toEndOf="@id/iv_service_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_meta" />
+
+        <!-- Book Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_book"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:text="@string/book"
+            android:textSize="@dimen/_8sdp"
+            android:insetTop="0dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:insetBottom="0dp"
+            app:cornerRadius="@dimen/_20sdp"
+            app:backgroundTint="@color/primary_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_price"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_33sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+
+    android:layout_margin="@dimen/_5sdp"
+
+
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_5sdp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tvDayName"
+        android:text="T"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:layout_height="@dimen/_25sdp"
+        android:layout_width="@dimen/_25sdp"
+        android:id="@+id/tvDate"
+        android:background="@drawable/gray_rounded"
+        android:text="13"
+        android:textSize="@dimen/_10sdp"
+        android:padding="8dp"
+
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp" />
+</LinearLayout>

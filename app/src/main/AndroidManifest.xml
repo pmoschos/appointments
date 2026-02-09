@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppointmentManagement">
+        <activity
+            android:name="com.ai.appointments.activities.EditServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.AddServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.ProviderDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.ConfirmAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.ServiceProviderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.ServiceDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ai.appointments.activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ai.appointments.activities.UserDashboard"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.user.AppointmentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lv_tabs"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:background="@drawable/bg_tab"
+        android:layout_height="@dimen/_36sdp">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center"
+            app:tabIndicatorHeight="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:tabIndicatorColor="@color/darkBrown"
+            app:tabSelectedTextColor="@color/white"
+            app:tabBackground="@drawable/bg_tab_selector"
+            app:tabGravity="fill"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            app:tabMode="fixed"
+            >
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/day" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/week" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/month" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+
+    <!-- Today + Date -->
+    <TextView
+        android:id="@+id/tvToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/today"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/primary_black"
+        android:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lv_tabs" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/_4sdp"
+        android:text="March 25, 2025"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvToday"
+        app:layout_constraintBottom_toBottomOf="@id/tvToday" />
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           app:layout_constraintTop_toBottomOf="@id/tvToday"
+           android:id="@+id/rv_calender"
+           app:layout_constraintStart_toStartOf="@id/tvToday"
+           app:layout_constraintEnd_toEndOf="@id/tvDate"
+           android:layout_height="wrap_content">
+           <!-- Calendar Row (M T W T F S S) -->
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvCalendar"
+               android:layout_width="match_parent"
+               android:visibility="visible"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_12sdp"
+               android:orientation="horizontal"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               app:spanCount="7"
+               tools:itemCount="7"
+               tools:listitem="@layout/item_calendar" />
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:id="@+id/cv_kalendar"
+               app:cardCornerRadius="@dimen/_10sdp"
+               app:cardElevation="0dp"
+               android:visibility="gone"
+               android:layout_margin="@dimen/_10sdp"
+               app:cardBackgroundColor="#F6F6F6"
+               android:layout_height="wrap_content">
+               <com.ai.appointments.calender.KalendarView
+                   android:id="@+id/kalendar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:calendarBackground="#F6F6F6"
+                   app:dateTextStyle="@style/weekText"
+                   app:monthTextStyle="@style/weekText"
+                   app:nextIcon="@drawable/calendarview_front"
+                   app:prevIcon="@drawable/calendarview_back"
+                   app:weekTextStyle="@style/weekText"
+                   app:selectedIndicator="@drawable/round_bg_blue"
+                   app:todayDateColor="@color/white"
+                   app:todayIndicator="@drawable/round_light_bg_blue" />
+
+           </androidx.cardview.widget.CardView>
+       </RelativeLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Appointments List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppointments"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_calender"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_appointment_card" />
+
+    <!-- Empty State View -->
+    <TextView
+        android:id="@+id/tvEmptyAppointments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="No appointments for selected day"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_calender" />
+</androidx.constraintlayout.widget.ConstraintLayout>

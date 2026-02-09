@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/main"
+    android:background="@color/white"
+    tools:context=".activities.LanguageActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gray_rounded"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/_7sdp"
+            />
+
+        <!-- Search Result Title -->
+        <TextView
+            android:id="@+id/service_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semibold"
+
+            />
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_height="wrap_content">
+
+        <!-- Search Box -->
+        <EditText
+            android:id="@+id/searchLanguage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@drawable/bg_edt"
+            android:hint="@string/search"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:inputType="text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Language List -->
+        <LinearLayout
+            android:id="@+id/languageList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/searchLanguage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- English -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:src="@drawable/ic_flag_uk"
+                    android:contentDescription="English"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/english"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:textColor="@android:color/black"/>
+
+                <RadioButton
+                    android:id="@+id/radio_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Greek -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:src="@drawable/ic_flag_el"
+                    android:contentDescription="Greek"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/greek"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:textColor="@android:color/black"/>
+
+                <RadioButton
+                    android:id="@+id/radio_greek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

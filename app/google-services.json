@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "6580893174",
+    "firebase_url": "https://appointments-38819-default-rtdb.firebaseio.com",
+    "project_id": "appointments-38819",
+    "storage_bucket": "appointments-38819.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6580893174:android:f3bb4f4d96c8fc58cb43d7",
+        "android_client_info": {
+          "package_name": "com.ai.appointments"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6580893174-qjv17l37ndrkk1eno3vpt9r5718rtfpk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ai.appointments",
+            "certificate_hash": "74901c4d7f1cdbe783ee1cfc3321c5740888a1b7"
+          }
+        },
+        {
+          "client_id": "6580893174-25a9bd7k6nembvbm8um8gaobc75jrhs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeUte4sVxhrVpjqqwjEnogZRs4Ltgceog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6580893174-25a9bd7k6nembvbm8um8gaobc75jrhs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
