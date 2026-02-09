@@ -236,7 +236,8 @@ class LoginActivity : AppCompatActivity() {
                     profileImageUrl = currentUser.photoUrl?.toString() ?: "",
                     createdAt = System.currentTimeMillis(),
                     updatedAt = System.currentTimeMillis(),
-                    notificationsEnabled = true
+                    notificationsEnabled = true, 
+                    userId=currentUser.uid
                 )
                 databaseHelper.saveNormalUser(uid, normalUser)
                 Log.d(TAG, "Created normal user profile for UID: $uid")
@@ -255,7 +256,8 @@ class LoginActivity : AppCompatActivity() {
                     notificationsEnabled = true,
                     businessInfo = BusinessInfo(),
                     workingHours = getDefaultWorkingHours(),
-                    isActive = true
+                    isActive = true,
+                    userId=currentUser.uid
                 )
                 databaseHelper.saveServiceProvider(uid, serviceProvider)
                 Log.d(TAG, "Created service provider profile for UID: $uid")
@@ -269,6 +271,55 @@ class LoginActivity : AppCompatActivity() {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         })
     }
+	   private fun createUserProfile(uid: String, roleType: RoleType) {
+			val currentUser = auth.currentUser ?: return
+
+			val baseProfile = when (roleType) {
+				RoleType.NORMAL_USER -> {
+					val normalUser = NormalUser(
+						firstName = currentUser.displayName?.split(" ")?.getOrNull(0) ?: "",
+						lastName = currentUser.displayName?.split(" ")?.getOrNull(1) ?: "",
+						email = currentUser.email ?: "",
+						dateOfBirth = 0, // To be completed in profile screen
+						language = getDefaultLanguage(),
+						profileImageUrl = currentUser.photoUrl?.toString() ?: "",
+						createdAt = System.currentTimeMillis(),
+						updatedAt = System.currentTimeMillis(),
+						notificationsEnabled = true, 
+						userId=currentUser.uid
+					)
+					databaseHelper.saveNormalUser(uid, normalUser)
+					Log.d(TAG, "Created normal user profile for UID: $uid")
+					Intent(this, UserDashboard::class.java)
+				}
+				RoleType.SERVICE_PROVIDER -> {
+					val serviceProvider = ServiceProvider(
+						firstName = currentUser.displayName?.split(" ")?.getOrNull(0) ?: "",
+						lastName = currentUser.displayName?.split(" ")?.getOrNull(1) ?: "",
+						email = currentUser.email ?: "",
+						dateOfBirth = 0,
+						language = getDefaultLanguage(),
+						profileImageUrl = currentUser.photoUrl?.toString() ?: "",
+						createdAt = System.currentTimeMillis(),
+						updatedAt = System.currentTimeMillis(),
+						notificationsEnabled = true,
+						businessInfo = BusinessInfo(),
+						workingHours = getDefaultWorkingHours(),
+						isActive = true,
+						userId=currentUser.uid
+					)
+					databaseHelper.saveServiceProvider(uid, serviceProvider)
+					Log.d(TAG, "Created service provider profile for UID: $uid")
+					Intent(this, ProviderDashboardActivity::class.java)
+				}
+				else -> return
+			}
+
+			// Navigate to respective dashboard
+			startActivity(baseProfile.apply {
+				flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+			})
+		}
 
     // ==============================
     // Helper Methods
