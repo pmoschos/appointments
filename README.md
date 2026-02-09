@@ -311,9 +311,7 @@ override fun attachBaseContext(newBase: Context?) {
 ---
 
 ## Screenshots
-> Πρόσθεσε screenshots εδώ για καλύτερη παρουσίαση:
-- `docs/screenshots/`
-- ή μέσα στο README με `![alt](path)`
+
 
 ---
 
