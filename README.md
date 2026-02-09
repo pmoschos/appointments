@@ -311,7 +311,7 @@ override fun attachBaseContext(newBase: Context?) {
 ---
 
 ## Screenshots
-
+<img width="1463" height="599" alt="image" src="https://github.com/user-attachments/assets/7427d6d9-9821-406e-9cad-9fef970c18b1" />
 
 ---
 
