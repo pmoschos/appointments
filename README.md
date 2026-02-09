@@ -315,5 +315,22 @@ override fun attachBaseContext(newBase: Context?) {
 
 ---
 
-## License
-Ανέβασε ένα `LICENSE` αρχείο (π.χ. MIT) ή συμπλήρωσε εδώ το καθεστώς χρήσης.
+## 📢 Stay Updated
+
+Be sure to ⭐ this repository to stay updated with new examples and enhancements!
+
+## 📄 License
+🔐 This project is protected under the [MIT License](https://mit-license.org/).
+
+
+## Contact 📧
+Panagiotis Moschos - pan.moschos86@gmail.com
+
+🔗 *Note: This is a Android Application and requires a Android Studio to build and run.*
+
+---
+<h1 align=center>Happy Coding 👨‍💻 </h1>
+
+<p align="center">
+  Made with ❤️ by Panagiotis Moschos (https://github.com/pmoschos)
+</p>
