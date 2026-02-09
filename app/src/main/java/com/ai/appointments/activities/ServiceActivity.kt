@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ai.appointments.activities.ServiceDetailsActivity
 import com.ai.appointments.adapters.ServiceListAdapter
 import com.ai.appointments.databinding.ActivityServiceBinding
 import com.ai.appointments.db.models.Service
